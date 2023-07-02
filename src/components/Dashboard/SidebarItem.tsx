@@ -1,17 +1,12 @@
 import useSWR from 'swr';
-import fetcher from '../../fetcher';
+import fetcher from '../../api/fetcher';
 import { urlTodayOpenClose } from '../../utils/createUrl';
 import { BadgeDelta, ListItem } from "@tremor/react";
-
-interface SidebarItemProps {
-    ticker: string;
-}
 
 interface AlternateItemProps {
     ticker: string;
     message: string;
 }
-
 
 function AlternateItem({ ticker, message }: AlternateItemProps) {
     return (
@@ -22,6 +17,10 @@ function AlternateItem({ ticker, message }: AlternateItemProps) {
     )
 } 
 
+
+interface SidebarItemProps {
+    ticker: string;
+}
 
 function SidebarItem({ ticker }: SidebarItemProps) {
     const url = urlTodayOpenClose(ticker);

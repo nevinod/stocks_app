@@ -2,8 +2,8 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Button, List, ListItem, TextInput } from '@tremor/react';
 import { Modal } from 'react-bootstrap';
-import { search, StockType } from '../../utils/searchStocks';
-import { FavoriteType } from '../../types/SidebarTypes';
+import { search } from '../../utils/searchStocks';
+import { FavoriteType, StockType } from '../../types/DashboardTypes';
 import styles from './Dashboard.module.css';
 
 
@@ -13,7 +13,6 @@ interface StockListItemProps {
     user: string | undefined;
     favorites: FavoriteType[];
 }
-
 
 function StockListItem({ stock, mutate, user, favorites }: StockListItemProps) {
     async function handleClick() {
@@ -48,7 +47,6 @@ interface AddFavoriteProps {
     mutate: Function;
     favorites: FavoriteType[];
 }
-
 
 function AddFavorite({ user, mutate, favorites }: AddFavoriteProps) {
     const [input, setInput] = useState("");

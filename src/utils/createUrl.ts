@@ -23,3 +23,8 @@ export function urlTodayOpenClose( ticker: string ) {
     const formattedDate = format(today, 'yyyy-MM-dd')
     return `https://api.polygon.io/v1/open-close/${ticker}/${formattedDate}?adjusted=true&apiKey=${import.meta.env.VITE_POLYGON_API_KEY}`
 }
+
+export function urlGainersLosers( gainers: boolean) {
+    let type = gainers ? "gainers" : "losers";
+    return `https://api.polygon.io/v2/snapshot/locale/us/markets/stocks/${type}?apiKey=${import.meta.env.VITE_POLYGON_API_KEY}`
+}

@@ -1,9 +1,10 @@
 import useSWR from 'swr';
 import { Card, List, Title } from "@tremor/react";
-import fetcher from '../../fetcher';
+import fetcher from '../../api/fetcher';
 import SidebarItem from './SidebarItem';
 import AddFavorite from './AddFavorite';
-import { FavoriteType } from '../../types/SidebarTypes';
+import { FavoriteType } from '../../types/DashboardTypes';
+
 
 interface SidebarProps {
     user: string | undefined;

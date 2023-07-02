@@ -7,3 +7,22 @@
     cursor: pointer;
     background-color: rgba(211, 211, 211, 0.245);
 }
+
+.contentContainer {
+    display: flex;
+    flex-direction: column !important;
+    align-items: start !important;
+    overflow: hidden;
+}
+
+.gainersContainer {
+    margin-top: 50px;
+    overflow-y: scroll;
+}
+
+.container {
+    margin-left: 340px;
+    display: flex;
+    flex-direction: column;
+    z-index: -1;
+}

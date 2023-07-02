@@ -1,10 +1,5 @@
 import axios from 'axios';
-
-export interface StockType {
-    Name: string;
-    Sector: string;
-    Symbol: string;
-}
+import { StockType } from '../types/DashboardTypes';
 
 function findStocks(stocks: StockType[], key: string) {
     const results: StockType[] = [];

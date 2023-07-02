@@ -49,6 +49,11 @@
       "user": "neildvinod@gmail.com",
       "ticker": "TSLA",
       "id": 10
+    },
+    {
+      "user": "neildvinod@gmail.com",
+      "ticker": "MSFT",
+      "id": 11
     }
   ],
   "companies": [
