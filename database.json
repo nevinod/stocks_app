@@ -2,51 +2,51 @@
   "favorites": [
     {
       "id": 1,
-      "user": "neildvinod@gmail.com",
+      "user": "@gmail.com",
       "ticker": "AAPL"
     },
     {
       "id": 2,
-      "user": "neildvinod@gmail.com",
+      "user": "@gmail.com",
       "ticker": "SOFI"
     },
     {
       "id": 3,
-      "user": "neildvinod@gmail.com",
+      "user": "@gmail.com",
       "ticker": "F"
     },
     {
       "id": 4,
-      "user": "neildvinod@gmail.com",
+      "user": "@gmail.com",
       "ticker": "JOBY"
     },
     {
       "id": 5,
-      "user": "neildvinod@gmail.com",
+      "user": "@gmail.com",
       "ticker": "SPY"
     },
     {
       "id": 6,
-      "user": "neilvinod@icloud.com",
+      "user": "@icloud.com",
       "ticker": "GOOG"
     },
     {
       "id": 7,
-      "user": "neilvinod@icloud.com",
+      "user": "@icloud.com",
       "ticker": "GILD"
     },
     {
-      "user": "neildvinod@gmail.com",
+      "user": "@gmail.com",
       "ticker": "AAP",
       "id": 8
     },
     {
-      "user": "neildvinod@gmail.com",
+      "user": "@gmail.com",
       "ticker": "GOOG",
       "id": 9
     },
     {
-      "user": "neildvinod@gmail.com",
+      "user": "@gmail.com",
       "ticker": "TSLA",
       "id": 10
     },
