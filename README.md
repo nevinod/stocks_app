@@ -1,3 +1,3 @@
 # stocks_app
 
-![dashboard](https://i.imgur.com/xPkBrJW.png)
+![dashboard](https://i.imgur.com/zAUcoTB.png)

@@ -42,6 +42,7 @@ function GainersLosersRow({ header, response }: GainersLosersRowProps) {
             <Flex className={styles.gainersContainer}>
                 {response && response?.data?.tickers.map((gainer: any) => 
                     <ContentCard
+                        key={gainer.ticker}
                         ticker={gainer.ticker}
                         todaysChangePerc={gainer.todaysChangePerc}
                         close={gainer.day.c}
