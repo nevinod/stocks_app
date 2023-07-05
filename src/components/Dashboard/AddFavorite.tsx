@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
 import { Button, List, ListItem, TextInput } from '@tremor/react';
 import { Modal } from 'react-bootstrap';
@@ -63,14 +63,16 @@ function AddFavorite({ user, mutate, favorites }: AddFavoriteProps) {
         setShow(false)
     }
 
-    useEffect(() => {
-        if(!input) {
+    function handleInputChange(e: React.ChangeEvent<HTMLInputElement>) {
+        setInput(e.currentTarget.value);
+        if(!e.currentTarget.value) {
             setResults([]);
             return;
         }
-        search(input)
-            .then(data => setResults(data));
-    }, [input])
+        search(e.currentTarget.value).then(data => {
+            setResults(data)
+        });
+    }
 
 
     return (
@@ -95,7 +97,7 @@ function AddFavorite({ user, mutate, favorites }: AddFavoriteProps) {
                         placeholder="Symbol (i.e. AAPL)" 
                         value={input} 
                         className='mb-2'
-                        onChange={e => setInput(e.currentTarget.value)}
+                        onChange={handleInputChange}
                         autoFocus={show}
                     />
                     <List>

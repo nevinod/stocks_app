@@ -15,7 +15,16 @@ function AlternateItem({ ticker, message }: AlternateItemProps) {
             <span>{message}</span>
         </ListItem>
     )
-} 
+}
+
+function badges(change: number) {
+    if(change > 0) {
+        return "increase";
+    } else if(change < 0) {
+        return "decrease";
+    }
+    return "unchanged";
+}
 
 
 interface SidebarItemProps {
@@ -30,16 +39,16 @@ function SidebarItem({ ticker }: SidebarItemProps) {
 
     if(error) return <AlternateItem ticker={ticker} message={"Error"} />;
 
-    const change = ((data.close - data.open) / data.open) * 100;
+    const change = data.close ? ((data.close - data.open) / data.open) * 100 : 0;
 
     return (
         <ListItem key={ticker}>
             <span>{ticker}</span>
             <div>
-                <span className='mr-2'>{data.close}</span>
+                <span className='mr-2'>{data.open}</span>
                 <BadgeDelta 
                     size="md"
-                    deltaType={change > 0 ? "increase" : "decrease"}
+                    deltaType={badges(change)}
                 >
                     {+change.toFixed(2)}%
                 </BadgeDelta>
