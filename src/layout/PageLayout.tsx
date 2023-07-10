@@ -7,7 +7,7 @@ function PageLayout() {
     return (
         <>
             <div className={styles.header}>
-                <Metric className='ml-8'>STOCKS</Metric>
+                <Metric className='ml-8'>STOCKS APP</Metric>
                 <div className='flex flex-row items-center'>
                     <div className='mr-8' >
                         <UserButton showName={true} />
