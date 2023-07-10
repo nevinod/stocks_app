@@ -17,7 +17,7 @@ interface ContentCardProps {
 
 function ContentCard({ ticker, todaysChangePerc, close}: ContentCardProps) {
     return (
-        <Card key={ticker} style={{margin: '10px'}}>
+        <Card key={ticker} style={{margin: '12px'}}>
             <BadgeDelta 
                 className='mb-4'
                 deltaType={todaysChangePerc > 0 ? "increase" : "decrease"}
